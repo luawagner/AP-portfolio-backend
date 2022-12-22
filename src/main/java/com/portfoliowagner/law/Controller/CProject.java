@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("projects")
-@CrossOrigin(origins = "https://frontend-portfolio-c160d.web.app")
+/*@CrossOrigin(origins = "https://frontend-portfolio-c160d.web.app")*/
 public class CProject {
 
     @Autowired
