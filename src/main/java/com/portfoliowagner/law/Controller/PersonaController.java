@@ -79,8 +79,8 @@ public class PersonaController {
 
             persona.setNombre(dtopersona.getNombre());
             persona.setApellido(dtopersona.getApellido());
-            persona.setImg(dtopersona.getImg());
             persona.setDescripcion(dtopersona.getDescripcion());
+            persona.setImg(dtopersona.getImg());
 
             personaService.save(persona);
 
@@ -94,7 +94,7 @@ public class PersonaController {
         }
         
         Persona persona = new Persona(
-                dtopersona.getNombre(), dtopersona.getDescripcion(), dtopersona.getApellido(),
+                dtopersona.getNombre(),  dtopersona.getApellido(),dtopersona.getDescripcion(),
                 dtopersona.getImg()
             );
         personaService.save(persona);
