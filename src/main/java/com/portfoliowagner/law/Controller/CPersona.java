@@ -1,6 +1,6 @@
 package com.portfoliowagner.law.Controller;
 
-import com.portfoliowagner.law.Dto.dtoPersona;
+import com.portfoliowagner.law.Dto.DtoPersona;
 import com.portfoliowagner.law.Entity.Persona;
 import com.portfoliowagner.law.Security.Controller.Mensaje;
 import com.portfoliowagner.law.Service.ImpPersonaService;
@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/personas")
 @CrossOrigin(origins = "https://frontend-portfolio-c160d.web.app")
-public class PersonaController {
+public class CPersona {
 
     
 
@@ -67,7 +67,7 @@ public class PersonaController {
                 
     }*/
         @PutMapping("/update/{id}")
-        public ResponseEntity<?> update(@PathVariable("id") int id, @RequestBody dtoPersona dtopersona) {
+        public ResponseEntity<?> update(@PathVariable("id") int id, @RequestBody DtoPersona dtopersona) {
             if (!personaService.existsById(id)) {
                 return new ResponseEntity(new Mensaje("No existe el ID"), HttpStatus.NOT_FOUND);
             }
@@ -87,7 +87,7 @@ public class PersonaController {
             return new ResponseEntity(new Mensaje("Persona actualizada"), HttpStatus.OK);
         }
         @PostMapping("/create")
-    public ResponseEntity<?> create(@RequestBody dtoPersona dtopersona){
+    public ResponseEntity<?> create(@RequestBody DtoPersona dtopersona){
        
         if(personaService.existsByNombre(dtopersona.getNombre())){
             return new ResponseEntity(new Mensaje("Ese nombre ya existe"), HttpStatus.BAD_REQUEST);

@@ -4,7 +4,7 @@ package com.portfoliowagner.law.Dto;
 import javax.validation.constraints.NotBlank;
 
 
-public class dtoPersona {
+public class DtoPersona {
   @NotBlank
     private String nombre;
   @NotBlank
@@ -14,10 +14,10 @@ public class dtoPersona {
   @NotBlank
     private String img;  
 
-    public dtoPersona() {
+    public DtoPersona() {
     }
 
-    public dtoPersona(String nombre, String apellido, String descripcion, String img) {
+    public DtoPersona(String nombre, String apellido, String descripcion, String img) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.descripcion = descripcion;
