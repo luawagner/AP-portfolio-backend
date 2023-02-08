@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.portfoliowagner.law.LawApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 14.653 s - in com.portfoliowagner.law.LawApplicationTests
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.51 s - in com.portfoliowagner.law.LawApplicationTests
