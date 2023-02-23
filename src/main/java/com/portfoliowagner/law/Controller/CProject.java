@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("projects")
+@RequestMapping("/projects")
 @CrossOrigin(origins = {"https://frontend-portfolio-c160d.web.app" ,"http://localhost:4200"})
 public class CProject {
 
