@@ -1,4 +1,3 @@
-
 package com.portfoliowagner.law.Dto;
 
 import javax.validation.constraints.NotBlank;
@@ -60,3 +59,4 @@ public class DtoPersona {
   
   
 }
+

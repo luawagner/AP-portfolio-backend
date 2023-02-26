@@ -20,14 +20,14 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/projects")
-@CrossOrigin(origins = {"https://frontend-portfolio-c160d.web.app" ,"http://localhost:4200"})
+@CrossOrigin(origins = {"https://frontend-portfolio-c160d.web.app", "http://localhost:4200"})
 public class CProject {
 
     @Autowired
     SProject sProject;
 
     @GetMapping("/lista")
-    public ResponseEntity<List<Project>> list() {
+    public ResponseEntity<List<Project>> list(){
         List<Project> list = sProject.list();
         return new ResponseEntity(list, HttpStatus.OK);
     }
@@ -40,9 +40,9 @@ public class CProject {
             return new ResponseEntity(new Mensaje("no existe"), HttpStatus.NOT_FOUND);
         }
 
-        Project experiencia = sProject.getOne(id).get();
+        Project project = sProject.getOne(id).get();
 
-        return new ResponseEntity(experiencia, HttpStatus.OK);
+        return new ResponseEntity(project, HttpStatus.OK);
 
     }
     @DeleteMapping("/delete/{id}")
@@ -56,10 +56,10 @@ public class CProject {
 
     @PostMapping("/create")
     public ResponseEntity<?> create(@RequestBody DtoProject dtoPro) {
-      /*  if ((dtoPro.getNombreP()).isBlank()) {
+       if ((dtoPro.getNombreP()).isBlank()) {
             return new ResponseEntity(new Mensaje("El nombre es obligatorio"), HttpStatus.BAD_REQUEST);
         }
-*/
+
          Project project = new Project(dtoPro.getNombreP(), dtoPro.getDescriptionP(),  dtoPro.getImgP(), dtoPro.getUrlP(),dtoPro.getGithubP());
         sProject.save(project);
 
